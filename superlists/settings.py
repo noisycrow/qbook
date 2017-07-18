@@ -25,7 +25,7 @@ SECRET_KEY = '5523!jgpcu*s4w&j%5p@i_7cy7+=2e&8hwzw=jc)6d)xo2au1b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'gruntbunny.xyz']
 
 
 # Application definition
