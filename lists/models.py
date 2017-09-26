@@ -5,11 +5,6 @@ from django.conf import settings
 
 class List(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 9d8897633a5cc61e1bd2e6a4d39539fd073c77d3
     def get_absolute_url(self):
         return reverse('view_list', args=[self.id])
 

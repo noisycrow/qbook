@@ -3,10 +3,6 @@ from django.core.exceptions import ValidationError
 from django.contrib.auth import get_user_model
 from lists.models import Item, List
 User = get_user_model()
-<<<<<<< HEAD
-
-=======
->>>>>>> 9d8897633a5cc61e1bd2e6a4d39539fd073c77d3
 
 class ItemModelTest(TestCase):
 
@@ -60,7 +56,6 @@ class ListModelTest(TestCase):
 
     def test_get_absolute_url(self):
         list_ = List.objects.create()
-<<<<<<< HEAD
         self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
 
     def test_create_new_creates_list_and_first_item(self):
@@ -92,14 +87,3 @@ class ListModelTest(TestCase):
         Item.objects.create(list=list_, text='first item')
         Item.objects.create(list=list_, text='second item')
         self.assertEqual(list_.name, 'first item')
-=======
-        self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')   
-
-    def test_lists_can_have_owners(self):
-        user = User.objects.create(email='a@b.com')
-        list_ = List.objects.create(owner=user)
-        self.assertIn(list_, user.list_set.all())
-
-    def test_list_owner_is_optional(self):
-        List.objects.create()
->>>>>>> 9d8897633a5cc61e1bd2e6a4d39539fd073c77d3
